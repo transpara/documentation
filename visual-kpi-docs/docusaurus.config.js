@@ -1,6 +1,5 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
 const {themes} = require('prism-react-renderer');
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
@@ -31,6 +30,65 @@ const config = {
     // ],
     require.resolve('docusaurus-plugin-image-zoom'),
     'docusaurus-plugin-sass',
+    // [
+      // '@scalar/docusaurus',
+      // {
+        // the `id` is required if you have multiple instances of the @scalar/docusaurus plugin
+        // id: 'tstore',
+        // label: 'tStore API',
+        // route: '/tstore-api',
+        // configuration: {
+          // spec: {
+            // url: "/api/tStore.json"
+          // },
+          // hideModels: true
+        // },
+      // }, 
+    // ],
+    // Second API definition
+    // [
+      // '@scalar/docusaurus',
+      // {
+        // the `id` is required if you have multiple instances of the @scalar/docusaurus plugin
+        // id: 'tcalc',
+        // label: 'tCalc API',
+        // route: '/tcalc-api',
+        // configuration: {
+          // spec: {
+            // url: "/api/tCalc.json"
+          // },
+          // hideModels: true,
+        // },
+      // }, 
+    // ],
+    [
+      '@scalar/docusaurus',
+      {
+        id:'1',
+        label: 'Petstore',
+        route: '/petstore',
+        configuration: {
+          spec: {
+            // Put the URL to your OpenAPI document here:
+            url: 'https://petstore.swagger.io/v2/swagger.json',
+          },
+        },
+      }
+    ],
+    [
+      '@scalar/docusaurus',
+      {
+        id:'2',
+        label: 'Scalar',
+        route: '/scalar',
+        configuration: {
+          spec: {
+            // Put the URL to your OpenAPI document here:
+            url: 'https://cdn.jsdelivr.net/npm/@scalar/galaxy/dist/latest.json',
+          },
+        },
+      }
+    ],
   ],
 
   title: 'Visual KPI',
