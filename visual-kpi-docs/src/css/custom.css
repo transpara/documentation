@@ -51,6 +51,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+
 /* Set Open Sans as the default font for the entire website */
 * {
   font-family: "Open Sans" !important;
@@ -205,4 +206,8 @@
 
 .container.margin-vert--lg .row .col.col--7 {
   background-color: #fff !important;
+}
+
+pre code {
+  background-color: rgb(246, 247, 248);
 }
