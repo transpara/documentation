@@ -48,6 +48,8 @@ export default function NavbarContent() {
   const items = useNavbarItems();
   const [leftItems, rightItems] = splitNavbarItems(items);
   const searchBarItem = items.find((item) => item.type === 'search');
+  const left = leftItems.find((item) => item.className === 'product_dropdown');
+
   return (
     <div>
     <NavbarContentLayout
@@ -56,7 +58,7 @@ export default function NavbarContent() {
         <>
           {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
-          {/* <NavbarItems items={leftItems} /> */}
+          <NavbarItems items={[left]} />
         </>
       }
       right={

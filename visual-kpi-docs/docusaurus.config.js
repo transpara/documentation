@@ -175,6 +175,22 @@ const config = {
             position: 'right',
             className: 'navbar_link_buttons support_btn'
           },
+          {
+            type: 'dropdown',
+            className: 'product_dropdown',
+            label: 'Products',
+            position: 'left',
+            items: [
+              {
+                label: 'VisualKPI',
+                href: '/'
+              },
+              {
+                label: 'Transpara',
+                href: 'https://www.transpara.com/',
+              },
+            ]
+          }
           // {
           //   to: 'https://www.transpara.com/',
           //   label: 'Learn more',
