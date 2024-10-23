@@ -39,13 +39,14 @@ function NavbarContentLayout({left}) {
 export default function NavbarSecondLine() {
   const items = useNavbarItems();
   const [leftItems] = splitNavbarItems(items);
+
+  const left = leftItems.filter((item) => item.className !== 'product_dropdown')
   return (
     <div className="navbar_second_line">
     <NavbarContentLayout
       left={
-        // TODO stop hardcoding items?
         <>
-          <NavbarItems items={leftItems} />
+          <NavbarItems items={left} />
         </>
       }
     />
