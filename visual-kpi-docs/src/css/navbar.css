@@ -54,6 +54,12 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.navbar__item.navbar__link.navbar__link--active:not(.home_btn),
+.highlight_home {
+  border-radius: 8px;
+  background-color: #eff2e6 !important;
+}
+
 .support_btn:before {
   display: flex;
   content: "";
