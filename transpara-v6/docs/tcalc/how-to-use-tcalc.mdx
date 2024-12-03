@@ -1,0 +1,87 @@
+---
+id: how-to-use-tcalc
+title: How to Use tCalc
+slug: how-to-use-tcalc
+description: ''
+tags: ['documentation']
+---
+
+tCalc is a robust calculation engine designed for flexible and scalable data processing. This guide will walk you through the process of using tCalc, from connecting databases to defining and evaluating calculations.
+
+:::info Work in Progress
+
+Some sections are placeholders for information that will be added as the project progresses.
+
+:::
+
+## Connecting to Databases to Import Data
+
+tCalc allows you to import data from multiple sources. Data can originate from graph databases like tGraph, relational databases, or other defined interfaces. Attributes in the system may be **static** or **dynamic**, with dynamic attributes fetching real-time data via defined lookups.
+
+### Steps to Connect a Database:
+
+1. Navigate to the **Interfaces** section in tCalc.
+2. Define the endpoint for the data source.
+3. Use the **lookup feature** to specify the attribute you want to retrieve (e.g., selecting a column from an SQL table or a tag from a time-series database).
+
+:::info Work in Progress
+
+More details on database integration will be added here as they are finalized.
+
+:::
+
+## Creating a Template
+
+Templates are predefined configurations for calculations that streamline the setup process. They allow consistent behavior across multiple objects.
+
+### Steps to Create a Template:
+
+1. Go to the **Templates** section.
+2. Select the template type (e.g., KPI template, Metric template).
+3. Define input attributes (e.g., attributes from the parent, child, or sibling objects in the hierarchy).
+4. Specify triggers, such as event-based or interval-based calculations.
+
+:::info Work in Progress
+
+More details on templates will be added here as they are finalized.
+
+:::
+
+## Defining Statements
+
+Statements in tCalc define the core logic of a calculation. They are executed sequentially, with outputs from one statement often serving as inputs for the next.
+
+### Programming Language for Statements
+
+tCalc supports predefined functions and operations that can be dynamically inserted via the interface. Users can drag-and-drop functions to build statements.
+
+### How to Define Statements
+
+1. Start by selecting a template or creating a new calculation.
+2. Input variables will appear automatically based on the target object.
+3. Use the editor to define your statement logic. For example, `Status = CalculateStatus(ActualValue, Threshold)`
+5. Save and evaluate the statements in real time to test results.
+
+## Connecting to Databases to Export Results
+
+After calculating, tCalc can export results to the same or other data sources. Export configurations define the destination and format of the output.
+
+### Steps to Export Results
+
+1. Configure the export interface in the **Interfaces** section.
+2. Map the output attributes from the calculation to the corresponding fields in the target system.
+3. Test the export setup using the evaluation feature to verify data accuracy.
+
+## Using the Template
+
+Templates simplify the reuse of calculations across multiple objects.
+
+### Applying a Template
+
+1. Select a target object (e.g., a substation, district, or KPI).
+2. Choose an existing template and instantiate it for the object.
+3. Modify parameters if needed, or activate the template version for immediate use.
+
+### Versioning
+
+Templates support multiple versions. You can save changes as a new version and activate them when ready. Existing calculations tied to the template will update automatically upon activation.
