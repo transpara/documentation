@@ -11,6 +11,7 @@
 
 const { 
   gettingStarted,
+  dashboards,
   tcalc 
 } = require('./.sidebar');
 
@@ -31,6 +32,13 @@ const sidebars = {
       className: 'sidebar_title',
     },
     ...gettingStarted,
+    {
+      type: 'html',
+      value: '<span class=\'sidebar_title\'>Dashboards</span>',
+      defaultStyle: true,
+      className: 'sidebar_title',
+    },
+    ...dashboards,
     {
       type: 'html',
       value: '<span class=\'sidebar_title\'>tCalc</span>',
