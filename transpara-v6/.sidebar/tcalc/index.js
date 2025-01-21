@@ -11,6 +11,11 @@ module.exports = [
   },
   {
     type: 'doc',
+    id: 'tcalc/how-to-use-tcalc',
+    label: 'How to Use tCalc',
+  },
+  {
+    type: 'doc',
     id: 'tcalc/tcalc-glossary',
     label: 'tCalc Glossary',
   },
